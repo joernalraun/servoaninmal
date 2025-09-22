@@ -1,6 +1,6 @@
 {
     "name": "calliope-servo",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Eine Servo-Erweiterung für den Calliope mini in MakeCode.",
     "license": "MIT",
     "dependencies": {
