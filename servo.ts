@@ -26,7 +26,7 @@ namespace calliopeServo {
     //% block="stoppe Servo %pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=3
     export function stopServo(pin: AnalogPin): void {
-        pins.digitalWritePin(<DigitalPin>pin, 0);
+        pins.servoSetPulse(pin, 0);
     }
 
     /**
