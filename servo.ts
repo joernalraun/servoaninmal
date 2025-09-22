@@ -35,20 +35,25 @@ namespace calliopeServo {
      * @param pin Servo-Steuerpin
      * @param fromDegrees Startwinkel (0–180)
      * @param toDegrees Zielwinkel (0–180)
+     * @param duration Gesamtdauer der Bewegung in Millisekunden (optional, Standard ~1000ms)
      */
-    //% block="eine Bewegung an Servo %pin von %fromDegrees|° bis %toDegrees|°"
+    //% block="eine Bewegung an Servo %pin von %fromDegrees|° bis %toDegrees|° in %duration|ms"
     //% fromDegrees.min=0 fromDegrees.max=180
     //% toDegrees.min=0 toDegrees.max=180
+    //% duration.defl=1000
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=3
-    export function moveServoEase(pin: AnalogPin, fromDegrees: number, toDegrees: number): void {
+    export function moveServoEase(pin: AnalogPin, fromDegrees: number, toDegrees: number, duration?: number): void {
         fromDegrees = Math.max(0, Math.min(180, fromDegrees));
         toDegrees = Math.max(0, Math.min(180, toDegrees));
 
-        let steps = 50; // Anzahl der Zwischenschritte
-        let delay = 20; // Pause in ms pro Schritt
+        let steps = 50; // Zwischenschritte für die Bewegung
+        let delay = 20; // Standard-Delay = ~1 Sekunde Gesamtdauer
+
+        if (duration && duration > 0) {
+            delay = Math.max(1, Math.idiv(duration, steps));
+        }
 
         for (let i = 0; i <= steps; i++) {
-            // t läuft von 0..1
             let t = i / steps;
 
             // Ease-In-Out (sinusförmig)
