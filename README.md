@@ -1,7 +1,10 @@
 # Calliope mini Servo Erweiterung
 
-Eine kleine MakeCode-Erweiterung für den **Calliope mini**, um Servomotoren einfach anzusteuern.  
-Der Servo akzeptiert Pulsweiten von **1075 µs (0°)** bis **1750 µs (180°)**.  
+Eine kleine MakeCode-Erweiterung für den **Calliope mini**, um 280° Servomotoren identisch zu 180° Servos anzusteuern. 
+Der Winkel ist hier auch auf 180° beschränkt.
+Der Servo empfängt mit der Erweiterung Pulsweiten von **1075 µs (0°)** bis **1750 µs (180°)**. 
+
+Generell unterstützt der Servo allerdings Pulsweiten in einem Bereich von 1000 µs bis 2000 µs und dreht sich dann bis zu 280°.
 
 ---
 
