@@ -34,7 +34,7 @@ Dadurch wird der Pin auf `LOW` gesetzt, und der Servo erhält kein Steuersignal 
 ## 📦 Installation
 1. Öffne [MakeCode für Calliope mini](https://makecode.calliope.cc/).  
 2. Klicke auf **Erweiterungen**.  
-3. Gib die GitHub-URL dieses Repos ein (oder füge die Dateien in ein eigenes Repo ein).  
+3. Gib die GitHub-URL (https://github.com/joernalraun/servoaninmal/) dieses Repos ein (oder füge die Dateien in ein eigenes Repo ein).  
 
 ---
 
